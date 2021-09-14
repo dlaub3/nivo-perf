@@ -49,7 +49,7 @@ const getChartData = <T extends Data>(
   depth: number,
   length: number
 ): SunburstTree<T> => {
-  const data: Array<T> = Array(length).fill(null).map(getFakerData);
+  const data = Array(length).fill(null).map(getFakerData) as Array<T>;
 
   return makeTree(
     makeNodeVal(value),
